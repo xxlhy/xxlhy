@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./font/iconfont.css" />
+	</head>
+	<body>
+		<ul>
+			<audio style="display:none;" src="./资源/horse.ogg" controls="controls"></audio>
+			<li>
+				薛之谦-难堪
+				<i onclick="f1()" class="iconfont icon-bofang"></i>
+				<i onclick="f2()" class="iconfont icon-xiazai"></i>
+			</li>
+			<li>
+			薛之谦-小丑
+			<i onclick="f3()" class="iconfont icon-bofang"></i>
+			<i onclick="f4()" class="iconfont icon-xiazai"></i></li>
+		</ul>
+	</body>
+</html>
+<script>
+		let ad = document.querySelector("audio");
+	function f1(){
+		ad.src = "./资源/11.mp3";
+		ad.play();
+	}
+	
+	function f2(){
+		ad.pause();
+	}
+	function f3(){
+		ad.src = "./资源/12.mp3";
+		ad.play();
+	}
+	
+	function f4(){
+		ad.pause();
+	}
+</script>

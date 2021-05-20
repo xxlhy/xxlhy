@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			@font-face
+			{
+				font-family: myFirstFont;
+				src: url(./font/字体视界法棍体.ttf); 
+			}
+			canvas{background: #CCCCCC;}
+			*{font-family: myFirstFont;}
+		</style>
+		
+	</head>
+	<body>
+		<canvas id="cv" width="800" height="500"> 你的浏览器不支持 canvas，请升级你的浏览器。</canvas>
+	</body>
+</html>
+<script>
+	window.onload=function(){
+		//得到画布
+		let cv = document.querySelector("#cv");
+		//从画布上得到画笔
+		let pen = cv.getContext("2d");
+		
+		//创建一张图片
+		let img = new Image();
+		//设置图片地址
+		img.src="img/5b3cfb788c634d49.jpg";
+		//图片加载
+		img.onload=function(){
+			//开始绘制
+			pen.rotate(.1)
+			pen.drawImage(img,100,100,500,300);
+			
+			
+			pen.clearRect(150,150,50,50);
+		}
+		
+	}
+	
+	
+	
+</script>

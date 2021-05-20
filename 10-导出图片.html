@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			@font-face
+			{
+				font-family: myFirstFont;
+				src: url(./font/字体视界法棍体.ttf); 
+			}
+			canvas{background: #CCCCCC;}
+			*{font-family: myFirstFont;}
+		</style>
+		
+	</head>
+	<body>
+		<canvas style="display: none;" id="cv" width="150" height="200"> 你的浏览器不支持 canvas，请升级你的浏览器。</canvas>
+		<img src="" />
+	</body>
+</html>
+<script>
+	window.onload=function(){
+		//得到画布
+		let cv = document.querySelector("#cv");
+		//从画布上得到画笔
+		let pen = cv.getContext("2d");
+		
+		pen.beginPath();
+		pen.moveTo(50,50);
+		pen.lineTo(100,100);
+		pen.lineTo(50,150);
+		pen.stroke()
+		
+		let url = cv.toDataURL("image/png"); 
+		document.querySelector("img").src=url;
+		
+	}
+	
+	
+	
+</script>

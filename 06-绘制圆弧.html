@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			canvas{background: #CCCCCC;}
+		</style>
+	</head>
+	<body>
+		<canvas id="cv" width="800" height="500"> 你的浏览器不支持 canvas，请升级你的浏览器。</canvas>
+	</body>
+</html>
+<script>
+	//得到画布
+	let cv = document.querySelector("#cv");
+	//从画布上得到画笔
+	let pen = cv.getContext("2d");
+	
+	pen.beginPath();
+	pen.moveTo(300,300);
+	pen.lineTo(300,320);
+	pen.stroke();
+	pen.closePath();
+	
+	//开始绘制
+	pen.beginPath()
+	
+	//绘制一个圆弧      true表示逆时针，false表示顺时针
+	pen.arc(300,300,100,0,1,true);
+	
+	pen.stroke();
+	
+	pen.beginPath();
+	pen.arc(100,100,50,0,8,true);
+	pen.stroke()
+	pen.fillStyle="red";
+	pen.fill();
+	
+</script>

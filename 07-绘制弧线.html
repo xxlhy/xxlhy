@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			canvas{background: #CCCCCC;}
+		</style>
+	</head>
+	<body>
+		<canvas id="cv" width="800" height="500"> 你的浏览器不支持 canvas，请升级你的浏览器。</canvas>
+	</body>
+</html>
+<script>
+	//得到画布
+	let cv = document.querySelector("#cv");
+	//从画布上得到画笔
+	let pen = cv.getContext("2d");
+	
+	
+	
+	pen.beginPath();
+	pen.moveTo(100,100);
+	pen.arcTo(300,100,300,120,20);
+	pen.stroke();
+	pen.closePath();
+	
+	
+	
+	pen.beginPath();
+	pen.moveTo(100,100);
+	pen.arcTo(300,100,300,180,60);
+	pen.stroke();
+	pen.closePath();
+	
+	pen.beginPath();
+	// pen.arcTo(300,100,300,280,180);
+	pen.moveTo(331.5 ,268 )
+	
+	pen.bezierCurveTo( 101.5, 98, 623.5, 99, 385.5,262)
+	pen.stroke();
+	
+	
+	pen.beginPath();
+	// pen.arcTo(300,100,300,280,180);
+	pen.moveTo(331.5 ,268 )
+	
+	pen.quadraticCurveTo( 358,286,  385.5,262)
+	pen.stroke();
+	
+	
+</script>

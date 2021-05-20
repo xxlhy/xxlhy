@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			@font-face
+			{
+				font-family: myFirstFont;
+				src: url(./font/字体视界法棍体.ttf); 
+			}
+			canvas{background: #CCCCCC;}
+			*{font-family: myFirstFont;}
+		</style>
+		
+	</head>
+	<body>
+		hello world
+		<canvas id="cv" width="800" height="500"> 你的浏览器不支持 canvas，请升级你的浏览器。</canvas>
+	</body>
+</html>
+<script>
+	window.onload=function(){
+		//得到画布
+		let cv = document.querySelector("#cv");
+		//从画布上得到画笔
+		let pen = cv.getContext("2d");
+		
+		pen.font = "100px myFirstFont";
+		pen.rotate(0.5);
+		pen.fillText("自古多情空余恨",100,100,300);
+		pen.closePath();
+		
+		pen.beginPath();
+		pen.rotate(-0.3)
+		pen.strokeText("此恨绵绵无绝期",200,50,600);
+		pen.closePath();
+		
+		for(let i=0;i<100;i++){
+			pen.beginPath();
+			pen.moveTo(Math.random()*500,Math.random()*500);
+			pen.lineTo(Math.random()*500,Math.random()*500);
+			pen.strokeStyle=`rgba(${Math.random()*255},${Math.random()*255},${Math.random()*255},${Math.random()})`;
+			pen.stroke();
+			pen.closePath();
+		}
+	}
+	
+	
+	
+</script>

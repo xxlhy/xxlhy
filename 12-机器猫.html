@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+
+    <body>
+        <canvas id="canvas" width="400" height="600"></canvas>
+    </body>
+    <script type="text/javascript">
+        var oCanvas = document.getElementById("canvas");
+        var width = oCanvas.width;
+        var height = oCanvas.height;
+        //上下文--画笔
+        var context = oCanvas.getContext("2d");
+
+        //绘制背景
+        context.fillStyle = 'whitesmoke'
+        context.fillRect(0, 0, width, height);
+
+        //绘制不规则图形
+        //脑袋
+        context.beginPath();
+        //context.moveTo(24, 150);
+        context.arc(200, 190, 165, 0, 2 * Math.PI);
+        context.closePath();
+        context.fillStyle = '#0BB0DA';
+        context.strokeStyle = 'black';
+        context.fill();
+        context.stroke();
+
+        //下半身
+        context.moveTo(73, 340);
+        context.lineTo(25, 403);
+        context.lineTo(68, 438);
+        context.lineTo(85, 417);
+        context.lineTo(85, 525);
+
+        context.lineTo(180, 525);
+        context.quadraticCurveTo(200, 490, 220, 525);
+        //        context.lineTo(180, 525);
+        context.lineTo(315, 525);
+        context.lineTo(315, 417);
+        context.lineTo(332, 438);
+        context.lineTo(370, 403);
+        context.lineTo(320, 340);
+        context.lineTo(73, 340);
+        context.fillStyle = '#0BB0DA';
+        context.fill();
+        context.stroke();
+
+        //左脚
+        context.beginPath();
+        context.moveTo(67, 525);
+        context.lineTo(188, 525);
+        context.quadraticCurveTo(210, 540, 188, 558);
+        context.lineTo(67, 558);
+        context.quadraticCurveTo(45, 540, 67, 525);
+        context.closePath();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'black';
+        context.fill();
+        context.stroke();
+
+        //右脚
+        context.beginPath();
+        context.moveTo(215, 525);
+        context.lineTo(330, 525);
+        context.quadraticCurveTo(350, 540, 330, 558);
+        context.lineTo(215, 558);
+        context.quadraticCurveTo(200, 540, 215, 525);
+        context.closePath();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'black';
+        context.fill();
+        context.stroke();
+
+        //左手
+        context.beginPath();
+        context.arc(42, 426, 28, 0, 2 * Math.PI);
+        context.closePath();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'black';
+        context.fill();
+        context.stroke();
+
+        //右手
+        context.beginPath();
+        context.arc(358, 426, 28, 0, 2 * Math.PI);
+        context.closePath();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'black';
+        context.fill();
+        context.stroke();
+
+        //口袋
+        context.beginPath();
+        context.arc(200, 390, 90, 0, 2 * Math.PI);
+        context.closePath();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'black';
+        context.fill();
+        context.stroke();
+
+        context.beginPath();
+        context.arc(200, 385, 70, 0, Math.PI);
+        context.closePath();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'black';
+        context.fill();
+        context.stroke();
+
+        //脖子
+        context.beginPath();
+        context.moveTo(78, 325);
+        context.lineTo(320, 325);
+        context.lineWidth = '30';
+        context.lineCap = 'round';
+        //context.closePath();
+        context.strokeStyle = '#B13209';
+        context.stroke();
+
+        //脸
+        context.beginPath();
+        context.moveTo(115, 311);
+        context.quadraticCurveTo(20, 220, 112, 123);
+        context.lineTo(295, 123);
+        //context.moveTo(190, 123);
+        context.quadraticCurveTo(380, 220, 280, 311);
+        context.closePath();
+        context.fillStyle = 'white';
+        context.fill();
+        context.lineWidth = '1';
+        context.strokeStyle = 'black';
+        context.stroke();
+
+        //左眼睛
+        context.beginPath();
+        context.ellipse(157, 115, 45, 55, 0, 0, 2 * Math.PI);
+
+        context.closePath();
+        context.strokeStyle = 'black';
+        context.lineWidth = '1';
+        context.fillStyle = 'white';
+        context.fill();
+        context.stroke();
+
+        //右眼睛
+        context.beginPath();
+        context.ellipse(247, 115, 45, 55, 0, 0, 2 * Math.PI);
+        context.closePath();
+        context.fillStyle = 'white';
+        context.strokeStyle = 'black';
+        context.fill();
+        context.stroke();
+        //左眼珠
+        context.beginPath();
+        context.arc(170, 135, 18, 0, 2 * Math.PI);
+        context.closePath();
+        context.fillStyle = '#000000';
+        context.fill();
+        //右眼珠
+        context.beginPath();
+        context.arc(230, 135, 18, 0, 2 * Math.PI);
+        context.closePath();
+        context.fillStyle = '#000000';
+        context.fill();
+        //鼻子
+        context.beginPath();
+        context.arc(202, 176, 24, 0, 2 * Math.PI);
+        context.closePath();
+        context.fillStyle = '#D05823';
+        context.fill();
+
+        //左胡须
+        context.moveTo(90, 175);
+        context.lineTo(150, 195);
+
+        context.moveTo(90, 200);
+        context.lineTo(150, 203);
+
+        context.moveTo(90, 223);
+        context.lineTo(150, 210);
+        context.stroke();
+
+        //右胡须
+        context.moveTo(320, 175);
+        context.lineTo(250, 195);
+
+        context.moveTo(320, 200);
+        context.lineTo(250, 203);
+
+        context.moveTo(320, 223);
+        context.lineTo(250, 210);
+        context.stroke();
+
+        //嘴巴上面的
+        context.moveTo(200, 210);
+        context.lineTo(200, 290);
+        context.stroke();
+
+        //嘴巴
+        context.moveTo(90, 240);
+        context.quadraticCurveTo(200, 360, 320, 240);
+        context.stroke();
+    </script>
+
+</html>
